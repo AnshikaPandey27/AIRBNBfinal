@@ -23,18 +23,14 @@ Check out the live demo [here]().
 ### Installation
 
 1. Clone the repository:
-   sh
-   git clone https://github.com/AnshikaPandey27/AIRBNBfinal.git
-   cd AIRBNBfinal
+   - git clone https://github.com/AnshikaPandey27/AIRBNBfinal.git
+   - cd AIRBNBfinal
 
 2. Installing the node modules
-   sh
-   npm install or
-   npm install --force
+   - npm install or
+   - npm install --force
 
 3. Running the Development Enviorment
-   sh
-   npm run dev
+   - npm run dev
 4. Running the production Build
-   sh
-   npm run build
+   - npm run build
