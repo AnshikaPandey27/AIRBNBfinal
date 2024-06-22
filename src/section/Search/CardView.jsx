@@ -1,21 +1,26 @@
-import { Box, Tab, Tabs } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";//Box (a layout component), Tab (a tab item), and Tabs (a container for multiple Tab items).
 import {
   Park,
   CastleTurret,
   Umbrella,
   Bed,
   SwimmingPool,
-} from "@phosphor-icons/react";
-import PropTypes from "prop-types";
+} from "@phosphor-icons/react";//import icons
+import PropTypes from "prop-types";//for type-checking the props passed to the components.
 import Properties from "./Properties";
 
 CardView.propTypes = {
-  value: PropTypes.number,
-  handleChangeTab: PropTypes.func,
-  view: PropTypes.string,
+  value: PropTypes.number,// a number representing the current selected tab index.
+  handleChangeTab: PropTypes.func,//a function to handle tab changes.
+  view: PropTypes.string,// a string representing the current view type.
 };
 
+//functional component that renders its children only if value matches index. 
 function CustomTabPanel(props) {
+  {/*children: The content to be rendered inside the tab panel.
+    value: The currently selected tab index.
+    index: The index of this particular CustomTabPanel.
+    ...other: Any other props that are passed to the component. */}
   const { children, value, index, ...other } = props;
   return (
     <div role="tabpanel" hidden={value !== index} {...other}>
@@ -35,7 +40,7 @@ export default function CardView(props) {
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
-          value={props.value}
+          value={props.value}//currently selected tab
           onChange={props.handleChangeTab}
           variant="scrollable"
           scrollButtons="auto"

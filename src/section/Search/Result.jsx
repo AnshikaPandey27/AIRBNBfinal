@@ -1,11 +1,13 @@
 import { Box, Chip, Grid, Stack, Typography } from "@mui/material";
 import { useState } from "react";
-import useResponsive from "../../hooks/useResponsive";
-import CardView from "./CardView";
-
+import useResponsive from "../../hooks/useResponsive";// determine if the view is desktop or not
+import CardView from "./CardView";//display in card format
+//The Grid system is used to layout the components.
+//Typography is used to display the text with proper styling.
+//Stack is used for vertical spacing, and Box is used for wrapping content, Chip is small badge component
 
 const Result = () => {
-  const { view} = useState("card");
+  const {view} = useState("card");
   const isDesktop = useResponsive("up", "md");
 
   const [value, setValue] = useState(0);
@@ -13,7 +15,8 @@ const Result = () => {
   const handleChangeTab = (event, newValue) => {
     setValue(newValue);
   };
-
+{/*Stack component uses flex with inline styling and padding with respect to x and y axis */}
+//pixels  x8
   return (
     <Stack sx={{ px: 3, py: 2 }} spacing={2}>
       <Box>
@@ -46,6 +49,7 @@ const Result = () => {
           
             <Grid item md={6} xs={12}>
               {/* card view*/}
+              {/*Card view component is placed below */}
             </Grid>
         </Box>
       <CardView

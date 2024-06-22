@@ -6,6 +6,8 @@ import PropertyType from "./PropertyType";
 import Ameneties from "./Ameneties";
 import Booking from "./Booking";
 
+//used modular programming
+
 const Filter = () => {
   return (
     <Box
@@ -20,6 +22,7 @@ const Filter = () => {
             mb: 2,
             py: 2,
             px: 3,
+            //set according to theme color
             bgcolor: (theme) =>
               theme.palette.mode === "light"
                 ? theme.palette.grey[200]

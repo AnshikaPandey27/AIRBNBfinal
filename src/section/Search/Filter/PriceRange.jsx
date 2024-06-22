@@ -26,7 +26,7 @@ const PriceRange = () => {
           size="small"
           label="minimum"
           type="number"
-          value={value[0]}
+          value={value[0]}//current minimum
           onChange={(e) => {
             setValue((prev) => {
               return [e.target.value, prev[1]];
@@ -37,7 +37,7 @@ const PriceRange = () => {
           size="small"
           label="maximum"
           type="number"
-          value={value[1]}
+          value={value[1]}//current maximum
           onChange={(e) => {
             setValue(() => {
               return [e.target.value];
